@@ -27,7 +27,9 @@ DEBUG = True
 import dj_database_url
 import os
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "my-first-project-srgq.onrender.com"
+]
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
@@ -47,6 +49,9 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://my-first-project-srgq.onrender.com"
+]
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
