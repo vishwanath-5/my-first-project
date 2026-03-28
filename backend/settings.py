@@ -47,14 +47,17 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework.authtoken',
 ]
+TIME_ZONE = 'Asia/Kolkata'
+USE_TZ = True
+
 
 CSRF_TRUSTED_ORIGINS = [
     "https://my-first-project-srgq.onrender.com",
     "https://my-first-project-frontend.vercel.app"
 ]
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,7 +134,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 CORS_ALLOW_ALL_ORIGINS=False
 CORS_ALLOWED_ORIGINS = [
-    "https://my-first-project-frontend.vercel.app"
+    "https://my-first-project-frontend.vercel.app",
+    
 ]
 
 REST_FRAMEWORK = {
