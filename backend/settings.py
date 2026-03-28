@@ -132,7 +132,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-CORS_ALLOW_ALL_ORIGINS=False
+CORS_ALLOW_ALL_ORIGINS=True
+CORS_ALLOW_CREDENTIALS = True
+CORE_TRUSTED_ORIGINS = [
+    "https://my-first-project-frontend-three.vercel.app",
+]
 CORS_ALLOWED_ORIGINS = [
     "https://my-first-project-frontend.vercel.app",
     
